@@ -1,0 +1,19 @@
+<!-- <h2>All Patents</h2>
+<ul>
+    {% for patent in patents %}
+        <li>{{ patent.title }} - {{ patent.owner }}</li>
+    {% endfor %}
+</ul>
+ -->
+
+ <h2>All Patents</h2>
+<ul>
+    {% for patent in patents %}
+        <li>
+            {{ patent.title }} - {{ patent.owner }}
+            {% if patent.document %}
+                <a href="{{ patent.document.url }}">View Patent Document</a>
+            {% endif %}
+        </li>
+    {% endfor %}
+</ul>

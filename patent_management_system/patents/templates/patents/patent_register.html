@@ -1,0 +1,13 @@
+<!-- <h2>Register Patent</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Register Patent</button>
+</form>
+ -->
+ <h2>Register Patent</h2>
+ <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Register Patent</button>
+</form>
